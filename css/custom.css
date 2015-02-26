@@ -1,0 +1,13 @@
+
+.mod-menu-login .nav.nav-pills{
+  display: inline-block;
+}
+
+.mod-menu-login form .controls{
+  display: inline-block;
+  margin-top:5px;
+}
+
+.mod-menu-login form .input-prepend{
+  margin:0;
+}

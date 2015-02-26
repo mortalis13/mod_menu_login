@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_menu_login</name>
+	<author>mortalis</author>
+	<creationDate>February 2015</creationDate>
+	<copyright>Copyright (C) 2015</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>stangerroman@gmail.com</authorEmail>
+	<version>1.0.0</version>
+	<description>MOD_MENU_LOGIN_XML_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_menu_login">mod_menu_login.php</filename>
+		<folder>css</folder>
+		<folder>tmpl</folder>
+		<folder>helpers</folder>
+		<filename>index.html</filename>		
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_menu_login.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_menu_login.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="menutype"
+					type="menu"
+					label="MOD_MENU_LOGIN_FIELD_MENUTYPE_LABEL"
+					description="MOD_MENU_LOGIN_FIELD_MENUTYPE_DESC" />
+				<field
+					name="base"
+					type="menuitem"
+					label="MOD_MENU_LOGIN_FIELD_ACTIVE_LABEL"
+					description="MOD_MENU_LOGIN_FIELD_ACTIVE_DESC"
+					>
+					<option value="">JCURRENT</option>
+				</field>
+				<field
+					name="startLevel"
+					type="list"
+					default="1"
+					label="MOD_MENU_LOGIN_FIELD_STARTLEVEL_LABEL"
+					description="MOD_MENU_LOGIN_FIELD_STARTLEVEL_DESC"
+				>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="endLevel"
+					type="list"
+					default="0"
+					label="MOD_MENU_LOGIN_FIELD_ENDLEVEL_LABEL"
+					description="MOD_MENU_LOGIN_FIELD_ENDLEVEL_DESC"
+					>
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="showAllChildren"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_MENU_LOGIN_FIELD_ALLCHILDREN_LABEL"
+					description="MOD_MENU_LOGIN_FIELD_ALLCHILDREN_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+
+
+			<fieldset name="login" label="Login">
+				<field
+					name="login"
+					type="menuitem"
+					disable="separator"
+					label="MOD_MENU_LOGIN_FIELD_LOGIN_REDIRECTURL_LABEL"
+					description="MOD_MENU_LOGIN_FIELD_LOGIN_REDIRECTURL_DESC" >
+					<option
+						value="">JDEFAULT</option>
+				</field>
+				<field
+					name="logout"
+					type="menuitem"
+					disable="separator"
+					label="MOD_MENU_LOGIN_FIELD_LOGOUT_REDIRECTURL_LABEL"
+					description="MOD_MENU_LOGIN_FIELD_LOGOUT_REDIRECTURL_DESC" >
+					<option
+						value="">JDEFAULT</option>
+				</field>
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="tag_id"
+					type="text"
+					label="MOD_MENU_LOGIN_FIELD_TAG_ID_LABEL"
+					description="MOD_MENU_LOGIN_FIELD_TAG_ID_DESC" />
+
+				<field
+					name="class_sfx"
+					type="text"
+					label="MOD_MENU_LOGIN_FIELD_CLASS_LABEL"
+					description="MOD_MENU_LOGIN_FIELD_CLASS_DESC" />
+
+				<field
+					name="window_open"
+					type="text"
+					label="MOD_MENU_LOGIN_FIELD_TARGET_LABEL"
+					description="MOD_MENU_LOGIN_FIELD_TARGET_DESC" />
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
