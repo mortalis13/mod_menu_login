@@ -31,9 +31,14 @@ class ModMenuLoginFormHelper
 	{
 		$app	= JFactory::getApplication();
 		$router = $app::getRouter();
-		$url = null;
+		$url = $app->input->get('return',null,'BASE64');
+		
+		if($url != null) {
+			$url = base64_decode($url);
+		}
 
-		if ($itemid = $params->get($type))
+		if ($url == null 
+			&& $itemid = $params->get($type))
 		{
 			$db		= JFactory::getDbo();
 			$query	= $db->getQuery(true)
