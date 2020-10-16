@@ -8,7 +8,7 @@ The **mod_menu** integration allows to select site menu which will be displayed 
 The **mod_login** module gives an option of login/logout redirect menu items.  
 
 ### Usage:
-1. Download the **.zip*.
+1. Download the **.zip** from the *releases* section of the repository.
 2. Go to the *Extensions -> Extension Manager* in the admin Joomla part.
 3. Drag the zip onto the upload field and **Upload & Install**.
 4. Go to the *Extensions -> Module Manager -> Site*.
